@@ -1,18 +1,18 @@
-import StoryComponent from './Input';
+import StoryComponent from './Radio';
 
 export default {
-  title: 'Atoms/Input',
+  title: 'Atoms/Radio',
   component: StoryComponent,
 };
 
 const Template = (args, { argTypes }) => ({
   components: { StoryComponent },
   props: Object.keys(argTypes),
-  template: '<StoryComponent :placeholder=placeholder />',
+  template: '<StoryComponent :values=values :labels=labels />',
 });
 
 export const Default = Template.bind({});
 Default.args = {
-  type: "text",
-  placeholder: "Input"
+  values: ["value1", "value2"],
+  labels: ["label1", "label2"]
 };

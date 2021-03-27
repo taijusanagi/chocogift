@@ -1,21 +1,25 @@
 <template>
   <div>
     <input
-      type="text"
+      :type="type"
       :placeholder="placeholder"
-      class="mt-1 p-2 block w-full border focus:ring-green-300 focus:border-green-300 text-xs border-gray-300 rounded-md"
+      class="form-input block w-full text-xs rounded-md"
       @change="onChange"
     />
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue, { PropType } from "vue";
 export default Vue.extend({
   props: {
+    type: {
+      type: String as PropType<"text" | "number">,
+      default: undefined
+    },
     placeholder: {
       type: String,
-      default: null
+      default: undefined
     }
   },
   methods: {
