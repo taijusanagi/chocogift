@@ -1,6 +1,5 @@
 <template>
   <AtomsContainer>
-    <OrganismsHero />
     <OrganismsGift />
   </AtomsContainer>
 </template>

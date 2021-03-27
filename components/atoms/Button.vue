@@ -12,7 +12,6 @@ import Vue from "vue";
 export default Vue.extend({
   methods: {
     onClick(e: unknown) {
-      console.log("click");
       this.$emit("click", e);
     }
   }

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "format": "prettier --ignore-path .gitignore --write \"**/*.{.ts,.js,tsx,jsx,vue,json,md,sol}\"",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{.ts,.js,vue,json,md}\"",
     "lint": "eslint . --ignore-path .gitignore",
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
@@ -12,6 +12,9 @@
     "storybook": "nuxt storybook -p 6006 --ci"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
     "@nuxt/typescript-runtime": "^2.0.1",
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12",
