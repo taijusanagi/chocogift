@@ -72,9 +72,13 @@ export default Vue.extend({
           const cid = tokenURI.split("//")[1];
           tokenURI = `https://ipfs.io/ipfs/${cid}`;
         }
-        const data = await this.$axios.$get(tokenURI);
-        const { image } = data;
-        this.image = image;
+        try {
+          const data = await this.$axios.$get(tokenURI);
+          const { image } = data;
+          this.image = image;
+        } catch (err) {
+          console.log(err);
+        }
         const { hash } = await attachedNftContract.connect(signer).transferFrom(userAddress, sendToAddress, tokenId);
         this.toggleLoadingOverlay();
         this.openMessageModal({
