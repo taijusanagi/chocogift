@@ -7,10 +7,10 @@
           <font-awesome-icon icon="times" />
         </button>
         <p class="my-8 text-sm text-secondary">{{ messageText }}</p>
-        <div class="w-6/12">
-          <!-- <NuxtLink :to="url">
+        <div class="w-6/12 mx-auto">
+          <a :href="url" target="_blank">
             <AtomsButton type="tertiary">{{ buttonText }}</AtomsButton>
-          </NuxtLink> -->
+          </a>
         </div>
       </div>
     </div>
@@ -23,21 +23,21 @@ export default Vue.extend({
   props: {
     messageText: {
       type: String,
-      default: undefined
+      default: undefined,
     },
     buttonText: {
       type: String,
-      default: undefined
+      default: undefined,
     },
     url: {
       type: [String],
-      default: undefined
-    }
+      default: undefined,
+    },
   },
   methods: {
     closeMessageModal() {
       this.$store.commit("messageModal/close");
-    }
-  }
+    },
+  },
 });
 </script>

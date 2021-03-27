@@ -10,7 +10,11 @@
       :buttonText="messageModalButtonText"
       :url="messageModalUrl"
     />
-    <MoleculesNotificationToast v-if="isNotificationToastDisplayed" />
+    <MoleculesNotificationToast
+      v-if="isNotificationToastDisplayed"
+      :type="notificationToastType"
+      :text="notificationToastText"
+    />
   </AtomsMain>
 </template>
 
@@ -41,7 +45,7 @@ export default Vue.extend({
     },
     notificationToastText() {
       return this.$store.state.notificationToast.props.text;
-    }
-  }
+    },
+  },
 });
 </script>

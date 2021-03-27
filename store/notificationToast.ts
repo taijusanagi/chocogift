@@ -2,8 +2,8 @@ export const state = () => ({
   isDisplayed: false,
   props: {
     type: "",
-    text: ""
-  }
+    text: "",
+  },
 });
 
 export const mutations = {
@@ -16,5 +16,5 @@ export const mutations = {
   },
   close(state: any) {
     state.isDisplayed = false;
-  }
+  },
 };

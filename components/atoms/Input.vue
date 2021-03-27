@@ -1,11 +1,6 @@
 <template>
   <div>
-    <input
-      :type="type"
-      :placeholder="placeholder"
-      class="form-input block w-full text-xs rounded-md"
-      @change="onChange"
-    />
+    <input :type="type" :placeholder="placeholder" class="form-input block w-full text-xs rounded-md" @input="input" />
   </div>
 </template>
 
@@ -15,18 +10,17 @@ export default Vue.extend({
   props: {
     type: {
       type: String as PropType<"text" | "number">,
-      default: undefined
+      default: undefined,
     },
     placeholder: {
       type: String,
-      default: undefined
-    }
+      default: undefined,
+    },
   },
   methods: {
-    onChange(e: unknown) {
-      console.log("change");
-      this.$emit("click", e);
-    }
-  }
+    input(e: any) {
+      this.$emit("input", e.target.value);
+    },
+  },
 });
 </script>
