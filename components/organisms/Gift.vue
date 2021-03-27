@@ -16,7 +16,7 @@
       <AtomsLabel text="NFT Token ID" />
       <AtomsInput v-model="tokenId" type="number" />
     </form>
-    <AtomsButton @click="send" class="w-32 mx-auto">Preview</AtomsButton>
+    <AtomsButton @click="send" class="w-32 mx-auto">Gift</AtomsButton>
   </section>
 </template>
 
