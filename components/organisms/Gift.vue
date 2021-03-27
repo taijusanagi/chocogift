@@ -9,6 +9,6 @@
       <AtomsLabel text="NFT Token ID" />
       <AtomsInput type="number" />
     </form>
-    <AtomsButton class="w-32 mx-auto">Send</AtomsButton>
+    <AtomsButton class="w-32 mx-auto">Preview</AtomsButton>
   </section>
 </template>

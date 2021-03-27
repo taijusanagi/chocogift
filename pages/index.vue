@@ -1,10 +1,8 @@
 <template>
-  <div>
+  <AtomsContainer>
     <OrganismsHero />
-    <AtomsContainer>
-      <OrganismsNozei />
-    </AtomsContainer>
-  </div>
+    <OrganismsGift />
+  </AtomsContainer>
 </template>
 
 <script lang="ts">
